@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./src",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "redux/*": ["src/redux/*"],
+      "utils/*": ["src/utils/*"],
+      "assets/*": ["src/assets/*"],
+      "modules/*": ["src/modules/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
