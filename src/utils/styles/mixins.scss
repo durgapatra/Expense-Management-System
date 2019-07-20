@@ -1,0 +1,22 @@
+@mixin image-title-container {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      overflow: hidden;
+      max-width: 233px;
+      align-items: center;
+    }
+  }
+  .title {
+    text-align: center;
+  }
+  .description {
+    text-align: center;
+    color: var(--text-color-secondary);
+  }
+}
