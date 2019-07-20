@@ -1,0 +1,22 @@
+.ant-layout-sider {
+  background-color: #fff !important;
+  background-size: cover !important ;
+  -webkit-box-shadow: 25px 0px 37px -28px rgba(0, 0, 0, 0.19);
+  box-shadow: 25px 0px 37px -28px rgba(0, 0, 0, 0.19);
+}
+.ant-menu {
+  background: transparent !important;
+  .ant-menu {
+    &.ant-menu-sub {
+      &.ant-menu-inline {
+        background-color: #fff !important;
+      }
+    }
+  }
+}
+.ant-layout-sider-trigger {
+  background-color: white !important;
+}
+.sidebar-icon {
+  color: red !important;
+}
