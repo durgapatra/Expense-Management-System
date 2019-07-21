@@ -40,7 +40,7 @@ const columns = props => {
           onEdit={() => {
             props.handleShowModal(true, rowData);
           }}
-          title="Are you sure you want to delete this location?"
+          title="Are you sure you want to delete this expense?"
           onRemove={() => props.deleteExpenseData(rowData)}
         />
       )

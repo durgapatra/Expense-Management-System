@@ -4,7 +4,8 @@ import {
   EXPENSE_DATE_UPDATED,
   ADD_NEW_EXPENSE,
   UPDATE_TOTAL_BUGDET,
-  ADD_NEW_CATEGORY
+  ADD_NEW_CATEGORY,
+  DELETE_CATEGORY
 } from "../constants/expense.connstants";
 
 const expense = (
@@ -37,7 +38,7 @@ const expense = (
         itemName: "bread",
         amount: 40,
         expense_date: "20/07/2019",
-        idDelete: false
+        isDelete: false
       }
     ],
     selectRowData: {}
@@ -63,7 +64,7 @@ const expense = (
     case DELETE_EXPENSE: {
       let expenseData = [...state.expenseData];
       let index = expenseData.findIndex(exp => exp.id === action.rowData.id);
-      expenseData.splice(index, 1, { ...action.rowData, isDelete: true });
+      expenseData[index].isDelete = true;
       return {
         ...state,
         expenseData
@@ -92,6 +93,15 @@ const expense = (
           }
         ]
       };
+    case DELETE_CATEGORY: {
+      let categoryList = [...state.categoryList];
+      let index = categoryList.findIndex(cat => cat.category_id === action.id);
+      categoryList[index].isDelete = true;
+      return {
+        ...state,
+        categoryList
+      };
+    }
     default:
       return state;
   }

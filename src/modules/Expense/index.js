@@ -1,6 +1,6 @@
 import React from "react";
 import ContainerLayout from "../../components/ContainerLayout";
-import { Form, Icon, Input, Button, Card, Table } from "antd";
+import { Button, Table } from "antd";
 import moment from "moment";
 import columns from "./column";
 import AddEditExpense from "./addEditExpense";
@@ -47,6 +47,13 @@ class Expense extends React.Component {
             dataSource={this.props.expenseData}
             columns={columns(this.props)}
             rowClassName={record => (record.isDelete ? "deleted" : "")}
+            pagination={{
+              defaultPageSize: 20,
+              showSizeChanger: true,
+              showQuickJumper: true,
+              showTotal: (total, range) =>
+                `${range[0]}-${range[1]} of ${total} items`
+            }}
           />
         </div>
         <AddEditExpense

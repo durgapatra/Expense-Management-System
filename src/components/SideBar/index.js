@@ -7,8 +7,6 @@ const { Sider } = Layout;
 
 class SideBare extends React.Component {
   render() {
-    console.log(this.props);
-
     return (
       <Sider>
         <div

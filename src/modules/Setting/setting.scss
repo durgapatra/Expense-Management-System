@@ -4,4 +4,16 @@
       width: 100%;
     }
   }
+  .delete {
+    text-decoration-line: line-through;
+    color: red;
+  }
+  .delete-icon-div {
+    color: red;
+  }
+  .ant-form {
+    &.ant-form-inline {
+      text-align: center;
+    }
+  }
 }

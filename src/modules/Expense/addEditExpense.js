@@ -15,7 +15,11 @@ const AddEditModal = props => {
   return (
     <div>
       <Modal
-        title="Basic Modal"
+        title={
+          Object.keys(props.selectRowData).length
+            ? "Edit expense"
+            : "Add expense"
+        }
         visible={props.showExpenseModal}
         onCancel={() => props.handleShowModal(false)}
         footer={[

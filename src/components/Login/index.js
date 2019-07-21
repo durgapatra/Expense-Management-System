@@ -39,14 +39,14 @@ class NormalLoginForm extends React.Component {
               <FormItem>
                 {getFieldDecorator("userName", {
                   rules: [
-                    { required: true, message: "Please input your username!" }
+                    { required: true, message: "Please input your email!" }
                   ]
                 })(
                   <Input
                     prefix={
-                      <Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
+                      <Icon type="email" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
-                    placeholder="Username"
+                    placeholder="Email: admin@admin.com"
                   />
                 )}
               </FormItem>
@@ -61,7 +61,7 @@ class NormalLoginForm extends React.Component {
                       <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
                     }
                     type="password"
-                    placeholder="Password"
+                    placeholder="Password :admin@123"
                   />
                 )}
               </FormItem>

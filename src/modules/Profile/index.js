@@ -1,12 +1,19 @@
 import React from "react";
 import ContainerLayout from "../../components/ContainerLayout";
-import { Form, Icon, Input, Button, Checkbox } from "antd";
+import { Form, Input } from "antd";
 
 class Profile extends React.Component {
   render() {
     return (
       <ContainerLayout>
-        <div>ssssssssssss</div>
+        <Form>
+          <Form.Item label="Email">
+            <Input value="admin@admin.com" disabled />
+          </Form.Item>
+          <Form.Item label="Password">
+            <Input value="admin@123" disabled />
+          </Form.Item>
+        </Form>
       </ContainerLayout>
     );
   }

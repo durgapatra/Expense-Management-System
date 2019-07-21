@@ -4,7 +4,8 @@ import {
   ADD_NEW_EXPENSE,
   DELETE_EXPENSE,
   UPDATE_TOTAL_BUGDET,
-  ADD_NEW_CATEGORY
+  ADD_NEW_CATEGORY,
+  DELETE_CATEGORY
 } from "../constants/expense.connstants";
 
 export const handleShowModal = (show, rowData = {}) => {
@@ -44,5 +45,12 @@ export const addNewCategory = name => {
   return {
     type: ADD_NEW_CATEGORY,
     name
+  };
+};
+
+export const deleteCategory = id => {
+  return {
+    type: DELETE_CATEGORY,
+    id
   };
 };

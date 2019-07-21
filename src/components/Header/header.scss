@@ -1,6 +1,10 @@
 .header {
   display: flex;
-  justify-content: flex-end;
   color: #fff;
   cursor: pointer;
+  .name {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
 }

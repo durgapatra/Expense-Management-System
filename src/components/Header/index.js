@@ -18,14 +18,16 @@ class MyHeader extends React.Component {
     return (
       <Header>
         <div className="header">
-          <span
+          <div className="name">Expenseeve</div>
+          <div
+            className="singout"
             onClick={() => {
               localStorage.removeItem("token");
               this.props.history.push("login");
             }}
           >
             Sign Out
-          </span>
+          </div>
         </div>
       </Header>
     );
