@@ -17,7 +17,8 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "serve -s build",
+    "postdeploy": "now alias -A ./build/now.json",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
